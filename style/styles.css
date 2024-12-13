@@ -1,0 +1,623 @@
+/* Base styles */
+
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column; 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e9f5e9; 
+    color: #333;
+}
+
+/* Hlavní obsah  */
+.main-content {
+    flex: 1; 
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;  
+    padding: 20px;
+    flex: 1; 
+}
+
+h1, h2, h4 {
+    color: #2f5135; 
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a6647;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 60px; 
+    margin-right: 10px;
+}
+
+.logo-text h1 {
+    color: #2f5135; 
+    font-size: 1.8rem; 
+    margin: 0; 
+    font-weight: bold; 
+    text-align: center; 
+    font-family: 'Arial', sans-serif; 
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #5a8763; 
+    color: #ffffff; 
+}
+
+
+/* Main content */
+.content {
+    padding: 20px;
+}
+
+.about, .features {
+    margin-bottom: 20px;
+}
+
+/* Sekce vlastností */
+.features {
+    padding: 20px;
+    background-color: transparent; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin: 20px 0;
+}
+
+
+.features h2 {
+    font-size: 1.8rem;
+    color: #2f5135; 
+    margin-bottom: 15px;
+}
+
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features ul li {
+    font-size: 1.1rem;
+    color: #333;
+    padding-left: 40px; 
+    position: relative;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Vlastní ikony */
+.features ul li i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%); 
+    font-size: 1.4rem;
+    color: #2f5135; 
+    transition: color 0.3s ease; 
+}
+
+/* Efekt pro položky seznamu při najetí */
+.features ul li:hover {
+    transform: scale(1.05); 
+    color: #5a8763; 
+}
+
+/* Změna barvy ikony při hover */
+.features ul li:hover i {
+    color: #5a8763; 
+}
+
+/* Vytvoření efektu pro celý seznam */
+.features ul li:before {
+    content: "✔"; 
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 1.2rem;
+    color: #2f5135;
+    transform: translateY(-50%);
+}
+
+
+/* Hero section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    
+}
+
+/* Text v hero sekci */
+.hero-text {
+    color: #2f5135; 
+    font-size: 2rem; 
+    margin: 0; 
+    font-weight: bold; 
+    text-align: center; 
+    font-family: 'Arial', sans-serif;
+    position: absolute; 
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(90, 99, 71, 0.3); 
+    padding: 10px;
+    max-width: 90%; 
+    word-wrap: break-word; 
+    box-sizing: border-box; 
+}
+
+/* Mění velikost textu v závislosti na šířce obrazovky */
+.hero-text h1 {
+    font-size: 5vw; 
+    color: #2f5135; 
+}
+
+/* Obrázek v hero sekci */
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Původní overlay s poloprůhledným pozadím */
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 5; 
+}
+
+/* Rozvržení pro knihy a filtry */
+.content-container {
+    display: flex;
+    width: 100%;
+    gap: 20px; 
+}
+
+/* Pravá část - Knihy */
+.books-section {
+    flex: 3;
+    background-color: #fff;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .hero-overlay {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-overlay {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .features ul {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        width: 90%; 
+    }
+}
+
+
+/* Share books section */
+.share-books {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f3f8f3; 
+    border-radius: 8px;
+}
+
+.share-books h2 {
+    color: #2f5135; 
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.share-books p {
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Catalog Carousel Section */
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+/* Rozvržení karuselu */
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+/* Styly pro knihy */
+.carousel-item {
+    background-color: white;
+    border-radius: 12px;
+    width: 250px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.carousel-item img.book-cover {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .book-image {
+        display: none; 
+    }
+}
+
+.carousel-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.book-link {
+    text-decoration: none; 
+}
+
+.book-title {
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: #2f5135; 
+    margin: 0; 
+    text-align: center; 
+}
+
+.carousel-content .category {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    background-color: #2f5135;
+    color: white;
+    border-radius: 12px;
+}
+
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #2f5135;
+}
+
+
+.carousel-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.book-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.book-info {
+    flex: 2;
+}
+
+.book-info h2 {
+    font-size: 2rem;
+    color: #2f5135;
+    margin-bottom: 20px;
+}
+
+.book-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.book-info strong {
+    font-weight: bold;
+}
+
+.button-general {
+    background-color: #2f5135; 
+    color: white; 
+    font-size: 1.1rem; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s ease-in-out; 
+    margin-top: 20px;
+}
+
+.button-general:hover {
+    background-color: #5a8763; 
+    transform: scale(1.05); 
+}
+
+.login-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+input:focus {
+    border-color: #3a6647;
+    outline: none;
+}
+
+
+
+.content-container {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+
+.books-section {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    justify-items: center;
+}
+
+h4 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2f5135;
+    margin-bottom: 20px;
+}
+
+.book-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-item:hover {
+    transform: scale(1.05); 
+}
+
+.book-cover {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.book-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2f5135;
+}
+
+.book-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.filters-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters-form {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column; 
+    width: 30%; 
+}
+
+.filter-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+
+.filter-group select {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.button-general {
+    background-color: #2f5135;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .filters-form {
+        flex-direction: row; 
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .filter-group {
+        width: 100%; 
+    }
+       
+    .books-grid {
+            grid-template-columns: 1fr; 
+    }
+}
+
+.footer {
+    text-align: center;
+    background-color: #3a6647;
+    color: white;
+    padding: 10px;
+    margin-top: auto; 
+}

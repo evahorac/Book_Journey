@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Journey - Katalog knih</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Book Journey Logo" class="logo-image">
+            <div class="logo-text">
+                <h1>Book Journey</h1>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="prihlaseni.html">Přihlášení</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="content-container">
+
+            <!-- Levá část - Filtry -->
+            <aside class="filters-section">
+                <h4>Filtry</h4>
+                <form class="filters-form">
+                    <!-- Filtr pro lokalitu -->
+                    <div class="filter-group">
+                        <label for="location">Lokalita</label>
+                        <select id="location" name="location">
+                            <option value="prague">Praha</option>
+                            <option value="brno">Brno</option>
+                            <option value="ostrava">Ostrava</option>
+                            <option value="plzen">Plzeň</option>
+                        </select>
+                    </div>
+
+                    <!-- Filtr pro žánr -->
+                    <div class="filter-group">
+                        <label for="genre">Žánr</label>
+                        <select id="genre" name="genre">
+                            <option value="romance">Román</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="thriller">Thriller</option>
+                            <option value="biography">Biografie</option>
+                        </select>
+                    </div>
+
+                    <!-- Tlačítko pro filtrování -->
+                    <button type="submit" class="button-general">Filtruj</button>
+                </form>
+            </aside>
+            <!-- Pravá část - Knihy -->
+            <section class="books-section">
+                <h4>Naše knihy</h4>
+                <div class="books-grid">
+                    <!-- Knihy -->
+                    <div class="book-item">
+                        <a href="detail_farma_zvirat.html" class="book-link">
+                            <img src="images/farma-zvirat.jpg" alt="Farma zvířat" class="book-cover">
+                            <div class="book-info">
+                                <h3>Farma zvířat</h3>
+                                <p><strong>Autor:</strong> George Orwell</p>
+                                <p><strong>Žánr:</strong> Román</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="book-item">
+                        <img src="images/hra-o-truny.jpg" alt="Hra o trůny" class="book-cover">
+                        <div class="book-info">
+                            <h3>Hra o trůny</h3>
+                            <p><strong>Autor:</strong> George R.R. Martin</p>
+                            <p><strong>Žánr:</strong> Fantasy</p>
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <img src="images/hana.jpg" alt="Hana" class="book-cover">
+                        <div class="book-info">
+                            <h3>Hana</h3>
+                            <p><strong>Autor:</strong> Alena Mornštajnová</p>
+                            <p><strong>Žánr:</strong> Thriller</p>
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <img src="images/kmotr.png" alt="Kmotr" class="book-cover">
+                        <div class="book-info">
+                            <h3>Kmotr</h3>
+                            <p><strong>Autor:</strong> Mario Puzo</p>
+                            <p><strong>Žánr:</strong> Krimi</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Book Journey. Všechna práva vyhrazena.</p>
+    </footer>
+
+</body>
+</html>
